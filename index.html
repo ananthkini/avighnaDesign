@@ -49,7 +49,7 @@
     <link href="css/swiper.css" rel="stylesheet" />
     <link href="css/magnific-popup.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-
+    <link href="css/form.css" rel="stylesheet" />
     <!-- Favicon  -->
     <link rel="icon" href="images/avighna-logo.jpg" />
   </head>
@@ -559,9 +559,7 @@
                           humble and best person Thank you amith sir we all felt
                           like a family member
                         </div>
-                        <div class="testimonial-author">
-                            Chaithra Chaithra
-                        </div>
+                        <div class="testimonial-author">Chaithra Chaithra</div>
                       </div>
                     </div>
                   </div>
@@ -578,11 +576,9 @@
                       />
                       <div class="card-body">
                         <div class="testimonial-text">
-                            Very cooperative and careful.
+                          Very cooperative and careful.
                         </div>
-                        <div class="testimonial-author">
-                            Herald D'silva
-                        </div>
+                        <div class="testimonial-author">Herald D'silva</div>
                       </div>
                     </div>
                   </div>
@@ -881,12 +877,22 @@
             <!-- end of text-container -->
           </div>
           <!-- end of col -->
-          <div class="col-lg-6">
+          <div class="col-lg-6 container-form">
+
+           
+  <div class="brand-title">Contact Us</div>
+  <form class="inputs" onsubmit="formHandler()">
+    <label>Name</label>
+    <input type="text" required="required" id="name" />
+    <label>Phone</label>
+    <input type="number" required="required" id="phone" />
+    <label>Message</label>
+    <input type="text" required="required" id="message" />
+    <button type="submit"><img src="images/vecteezy_whatsapp-logo-png-icon_16716480.png" height="50px" /> Share on WhatsApp</button>
+  </div>
             <!-- Contact Form -->
-            <form id="contactForm" data-toggle="validator" data-focus="false">
-              <span class="center">Scan to Chat on Whatsapp</span>
-              <img src="./images/wa_qr.jpeg" />
-            </form>
+            
+
             <!-- end of contact form -->
           </div>
           <!-- end of col -->
@@ -938,5 +944,15 @@
     <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script>
     <!-- Custom scripts -->
+
+    <script>
+      function formHandler() {
+        let name = $("#name").val();
+        let phone = $("#phone").val();
+        let message = $("#message").val();
+// alert(name)
+        location.href = `https://wa.me/+918904158336?text=Hi, I'm ${name}, my number is ${phone} and my message is ${message}`;
+      }
+    </script>
   </body>
 </html>
